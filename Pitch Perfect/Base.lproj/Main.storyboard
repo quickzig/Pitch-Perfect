@@ -89,12 +89,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfR-y9-gws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743" y="447"/>
+            <point key="canvasLocation" x="1822.5" y="447"/>
         </scene>
         <!--Record-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1qi-J0-w79"/>
                         <viewControllerLayoutGuide type="bottom" id="wv0-aT-TYx"/>
@@ -125,7 +125,6 @@
                                 </state>
                                 <connections>
                                     <action selector="recordingStop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="M1t-MO-aqD"/>
-                                    <segue destination="aFr-9t-50o" kind="show" id="uux-kK-kv5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,11 +171,12 @@
                         <outlet property="recordButton" destination="aqT-ra-kbs" id="7GB-Os-FDU"/>
                         <outlet property="recordingLabel" destination="E61-Se-zeK" id="uJ3-BB-Wvt"/>
                         <outlet property="stopButton" destination="pBv-kl-zxZ" id="xgS-mt-tKc"/>
+                        <segue destination="aFr-9t-50o" kind="show" identifier="stopRecording" id="NLU-cT-G4x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="447"/>
+            <point key="canvasLocation" x="1089" y="447"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g96-NR-QT5">
