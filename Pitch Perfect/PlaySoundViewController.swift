@@ -46,23 +46,7 @@ class PlaySoundViewController: UIViewController {
     }
     
     @IBAction func playEchoSound(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        
-        var audioPlayerNode = AVAudioPlayerNode()
-        audioEngine.attachNode(audioPlayerNode)
-        
-        var changeDelayEffect = AVAudioUnitDelay()
-        changeDelayEffect.delayTime = 0.5
-        audioEngine.attachNode(changeDelayEffect)
-        
-        audioEngine.connect(audioPlayerNode, to: changeDelayEffect, format: nil)
-        audioEngine.connect(changeDelayEffect, to: audioEngine.outputNode, format: nil)
-        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        audioEngine.startAndReturnError(nil)
-        audioPlayerNode.play()
-    
+        playAudioWithEcho(0.5)
     }
     
     @IBAction func stopSound(sender: UIButton) {
@@ -78,6 +62,28 @@ class PlaySoundViewController: UIViewController {
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
     }
+    
+   func playAudioWithEcho(delay: NSTimeInterval)
+   {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+    
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+    
+        var changeDelayEffect = AVAudioUnitDelay()
+        changeDelayEffect.delayTime = delay
+        audioEngine.attachNode(changeDelayEffect)
+    
+        audioEngine.connect(audioPlayerNode, to: changeDelayEffect, format: nil)
+        audioEngine.connect(changeDelayEffect, to: audioEngine.outputNode, format: nil)
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        audioPlayerNode.play()
+    
+    }
+    
     
     func playAudioWithVariablePitch(pitch: Float){
         audioPlayer.stop()
