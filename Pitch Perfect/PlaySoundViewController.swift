@@ -44,7 +44,27 @@ class PlaySoundViewController: UIViewController {
     @IBAction func playDarthvaderSound(sender: UIButton) {
         playAudioWithVariablePitch(-1000)
     }
-   
+    
+    @IBAction func playEchoSound(sender: UIButton) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        var changeDelayEffect = AVAudioUnitDelay()
+        changeDelayEffect.delayTime = 0.5
+        audioEngine.attachNode(changeDelayEffect)
+        
+        audioEngine.connect(audioPlayerNode, to: changeDelayEffect, format: nil)
+        audioEngine.connect(changeDelayEffect, to: audioEngine.outputNode, format: nil)
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioEngine.startAndReturnError(nil)
+        audioPlayerNode.play()
+    
+    }
+    
     @IBAction func stopSound(sender: UIButton) {
         audioPlayer.stop()
     }
