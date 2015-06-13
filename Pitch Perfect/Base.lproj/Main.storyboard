@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hks-qP-pmj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,9 +23,6 @@
                                 <state key="normal" image="fast">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="236" y="106" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playFastSound:" destination="aFr-9t-50o" eventType="touchUpInside" id="OS4-NT-GnJ"/>
                                 </connections>
@@ -43,9 +41,6 @@
                                 <state key="normal" image="chipmunk">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="68" y="314" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playChipmunkSound:" destination="aFr-9t-50o" eventType="touchUpInside" id="GA6-8f-wit"/>
                                 </connections>
@@ -55,9 +50,6 @@
                                 <state key="normal" image="darth">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="236" y="314" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playDarthvaderSound:" destination="aFr-9t-50o" eventType="touchUpInside" id="Tph-L1-PAn"/>
                                 </connections>
@@ -67,9 +59,6 @@
                                 <state key="normal" image="slow">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="68" y="106" width="100" height="100"/>
-                                </variation>
                                 <connections>
                                     <action selector="playSlowSound:" destination="aFr-9t-50o" eventType="touchUpInside" id="5UI-9I-hFJ"/>
                                 </connections>
@@ -97,16 +86,16 @@
                                 <exclude reference="Ed8-J5-kZD"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="esK-1p-5U8"/>
-                                <exclude reference="iGS-j5-Nk2"/>
-                                <exclude reference="BG1-Ja-i2p"/>
-                                <exclude reference="STJ-PA-HSU"/>
-                                <exclude reference="RVn-B5-P30"/>
-                                <exclude reference="tQa-N9-1JW"/>
+                                <exclude reference="6VD-RH-bcn"/>
                                 <exclude reference="JYZ-jV-c0n"/>
                                 <exclude reference="ckt-PU-27p"/>
                                 <exclude reference="Y0R-qE-4Kb"/>
-                                <exclude reference="6VD-RH-bcn"/>
+                                <exclude reference="esK-1p-5U8"/>
+                                <exclude reference="iGS-j5-Nk2"/>
+                                <exclude reference="RVn-B5-P30"/>
+                                <exclude reference="tQa-N9-1JW"/>
+                                <exclude reference="BG1-Ja-i2p"/>
+                                <exclude reference="STJ-PA-HSU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -118,16 +107,16 @@
                                 <include reference="Ed8-J5-kZD"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="esK-1p-5U8"/>
-                                <include reference="iGS-j5-Nk2"/>
-                                <include reference="BG1-Ja-i2p"/>
-                                <include reference="STJ-PA-HSU"/>
-                                <include reference="RVn-B5-P30"/>
-                                <include reference="tQa-N9-1JW"/>
+                                <include reference="6VD-RH-bcn"/>
                                 <include reference="JYZ-jV-c0n"/>
                                 <include reference="ckt-PU-27p"/>
                                 <include reference="Y0R-qE-4Kb"/>
-                                <include reference="6VD-RH-bcn"/>
+                                <include reference="esK-1p-5U8"/>
+                                <include reference="iGS-j5-Nk2"/>
+                                <include reference="RVn-B5-P30"/>
+                                <include reference="tQa-N9-1JW"/>
+                                <include reference="BG1-Ja-i2p"/>
+                                <include reference="STJ-PA-HSU"/>
                             </mask>
                         </variation>
                     </view>
@@ -157,7 +146,7 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Il1-LX-tZ9"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E61-Se-zeK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E61-Se-zeK">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
                                 <color key="textColor" red="0.10196078431372549" green="0.2196078431372549" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
