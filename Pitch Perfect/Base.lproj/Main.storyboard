@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hks-qP-pmj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -67,9 +68,6 @@
                                 <state key="normal" image="echo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="161" y="182" width="80" height="80"/>
-                                </variation>
                                 <connections>
                                     <action selector="playEchoSound:" destination="aFr-9t-50o" eventType="touchUpInside" id="9YM-Br-vZk"/>
                                 </connections>
@@ -100,18 +98,18 @@
                                 <exclude reference="bt6-0M-v8q"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6VD-RH-bcn"/>
+                                <exclude reference="ckt-PU-27p"/>
+                                <exclude reference="jaa-1y-trX"/>
+                                <exclude reference="Y0R-qE-4Kb"/>
                                 <exclude reference="esK-1p-5U8"/>
                                 <exclude reference="iGS-j5-Nk2"/>
                                 <exclude reference="RVn-B5-P30"/>
                                 <exclude reference="n8j-o2-uJA"/>
-                                <exclude reference="4Iq-TW-Bga"/>
-                                <exclude reference="inl-8w-viv"/>
                                 <exclude reference="BG1-Ja-i2p"/>
                                 <exclude reference="STJ-PA-HSU"/>
-                                <exclude reference="ckt-PU-27p"/>
-                                <exclude reference="jaa-1y-trX"/>
-                                <exclude reference="Y0R-qE-4Kb"/>
-                                <exclude reference="6VD-RH-bcn"/>
+                                <exclude reference="4Iq-TW-Bga"/>
+                                <exclude reference="inl-8w-viv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -124,18 +122,18 @@
                                 <include reference="bt6-0M-v8q"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="6VD-RH-bcn"/>
+                                <include reference="ckt-PU-27p"/>
+                                <include reference="jaa-1y-trX"/>
+                                <include reference="Y0R-qE-4Kb"/>
                                 <include reference="esK-1p-5U8"/>
                                 <include reference="iGS-j5-Nk2"/>
                                 <include reference="RVn-B5-P30"/>
                                 <include reference="n8j-o2-uJA"/>
-                                <include reference="4Iq-TW-Bga"/>
-                                <include reference="inl-8w-viv"/>
                                 <include reference="BG1-Ja-i2p"/>
                                 <include reference="STJ-PA-HSU"/>
-                                <include reference="ckt-PU-27p"/>
-                                <include reference="jaa-1y-trX"/>
-                                <include reference="Y0R-qE-4Kb"/>
-                                <include reference="6VD-RH-bcn"/>
+                                <include reference="4Iq-TW-Bga"/>
+                                <include reference="inl-8w-viv"/>
                             </mask>
                         </variation>
                     </view>
